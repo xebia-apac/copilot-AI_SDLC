@@ -93,10 +93,10 @@ Slash commands trigger a specific Copilot action. Type `/` in chat to open the c
 
 ### Step 2 — `/explain` with a file
 
-Explain a whole file without opening it:
+Explain a whole file without opening it: add file to the copilot chat
 
 ```
-/explain #file:requirement.md
+/explain requirement.md
 ```
 ---
 
