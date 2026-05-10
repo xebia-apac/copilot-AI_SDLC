@@ -18,7 +18,7 @@
 
 ## What You Will Learn
 
-1. How to understand `requirement.md` using `#file:` and `#selection`.
+1. How to understand `requirement.md` using  `#selection`.
 2. How to move from simple explanation to structured requirement extraction.
 3. How chat variables and slash commands speed up and focus responses.
 
@@ -29,15 +29,7 @@
 3. Keep Ask mode for all prompts in this exercise.
 4. Run Step 1, Step 2, Step 3, then the Add-On prompts in order.
 
-### Step 1 — `#file` for requirement understanding (file-grounded)
-
-Prompt:
-
-```
-Read #file:requirement.md and explain the problem statement in simple language for a beginner.
-```
-
-### Step 2 — `@github` for GitHub workflow guidance
+### Step 1 — `@github` for GitHub workflow guidance
 
 Prompt:
 
@@ -52,21 +44,20 @@ Chat variables pin specific context into your prompt — no copy-pasting require
 
 | Variable | Scope | Best used for |
 |---|---|---|
-| `#file:` | One file | Grounding answers in a specific document |
 | `#selection` | Highlighted text | Focused questions on a code or text snippet |
 | `#codebase` | All indexed files | Cross-file search and summaries |
 | `#sym` | A named symbol | Explaining or refactoring a function/class/variable |
 
 ---
 
-### Step A — `#file:` variable
+### Step A — `Add file to chat` variable
 
 Pin Copilot to a single file.
 
 Prompt:
 
 ```
-From #file:requirement.md, create a table with columns: Requirement, Priority, Reason.
+From requirement.md, create a table with columns: Requirement, Priority, Reason.
 ```
 
 ### Step B — `#selection` variable
@@ -111,8 +102,8 @@ Explain a whole file without opening it:
 
 ## Key Takeaways
 
-- Use `#file:`, `#selection`, `#codebase`, `#sym`, and `#editor` to control exactly what Copilot reads.
-- `#codebase` is broad (all files); `#file:` is precise (one file); `#selection` is surgical (highlighted text only).
+- Use `#selection`, `#codebase`, `#sym`, and `#editor` to control exactly what Copilot reads.
+- `#codebase` is broad (all files); `#selection` is surgical (highlighted text only).
 - Slash commands (`/explain`, `/fix`, `/tests`, `/doc`) trigger specific Copilot actions — no long prompts needed.
 - Build prompts progressively: explain first, then extract, then structure.
 
