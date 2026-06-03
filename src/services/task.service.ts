@@ -68,6 +68,7 @@ export async function updateExistingTask(taskId: string, input: {
   assigneeId?: string;
   estimatedCompletionDate?: string;
   note?: string;
+  changedById?: string;
 }) {
   const task = await getTask(taskId);
   const assigneeId = input.assigneeId ? await verifyAssignee(input.assigneeId) : task.assigneeId ?? undefined;
@@ -81,7 +82,11 @@ export async function updateExistingTask(taskId: string, input: {
   };
 
   if (input.status && input.status !== task.status) {
-    await createTaskStatusHistory(task.id, task.status, input.status, assigneeId ?? task.assigneeId ?? "", input.note);
+    const changedById = input.changedById ?? task.assigneeId;
+    if (!changedById) {
+      throw new ApiError("Status change requires a valid user context", 400, "MISSING_USER_CONTEXT");
+    }
+    await createTaskStatusHistory(task.id, task.status, input.status, changedById, input.note);
   }
 
   return updateTask(task.id, updateData);

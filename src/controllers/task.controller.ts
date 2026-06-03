@@ -35,7 +35,8 @@ export async function getTaskById(req: Request, res: Response): Promise<void> {
 export async function updateTask(req: Request, res: Response): Promise<void> {
   const taskId = req.params.taskId;
   const input = req.body as UpdateTaskInput & { note?: string };
-  const task = await updateExistingTask(taskId, input);
+  const userId = res.locals.user?.id as string;
+  const task = await updateExistingTask(taskId, { ...input, changedById: userId });
   res.json({ success: true, data: task, error: null, meta: null });
 }
 

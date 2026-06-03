@@ -111,6 +111,7 @@ export async function countTasksDueInRange(start: Date, end: Date) {
 }
 
 export async function createTaskDependency(taskId: string, dependsOnTaskId: string) {
+  return prisma.taskDependency.create({
     data: {
       taskId,
       dependsOnTaskId,
