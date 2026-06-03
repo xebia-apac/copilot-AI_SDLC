@@ -3,8 +3,9 @@ import { ZodSchema } from "zod";
 import { ApiError } from "../errors/ApiError";
 
 export function validateRequest(schema: ZodSchema<any>) {
-  return (req: Request, res: Response, next: NextFunction): void => {
-    const result = schema.safeParse(req.body);
+  return (req: Request, _res: Response, next: NextFunction): void => {
+    const payload = req.method === "GET" ? req.query : req.body;
+    const result = schema.safeParse(payload);
 
     if (!result.success) {
       const issues = result.error.format();

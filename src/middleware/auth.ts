@@ -25,7 +25,7 @@ export function authenticate(req: Request, res: Response, next: NextFunction): v
 }
 
 export function authorize(roles: string[]) {
-  return (req: Request, res: Response, next: NextFunction): void => {
+  return (_req: Request, res: Response, next: NextFunction): void => {
     const user = res.locals.user;
     if (!user || !roles.includes(user.role)) {
       throw new ApiError("Forbidden", 403, "FORBIDDEN");
