@@ -61,8 +61,6 @@ You are a specialist in internationalization building a financial dashboard in a
 
 **Expected result:** Copilot proposes a refactored function with the requested arguments, output format, locale handling, and invalid-input behavior.
 
-**Why it works:** By providing the environment (Node.js) and a persona (i18n specialist), you ensure the AI uses relevant libraries. Explicitly defining edge case behavior (null inputs) prevents bugs in the generated code.
-
 ### Scenario 2: Refactoring Code
 
 **Vague Prompt (Subjective request):**
@@ -78,8 +76,6 @@ Act as a performance tuning expert. Refactor the `process_data` function in #rea
 
 **Expected result:** Copilot proposes a clearer refactoring and explains the performance and memory trade-offs instead of assuming that pandas always uses less memory.
 
-**Why it works:** "Better" is vague; specifying "performance" and "memory usage" gives the AI a clear optimization target. Restricting the toolset to `pandas` ensures the output fits your technical stack.
-
 ### Scenario 3: Documentation and Testing
 
 **Vague Prompt (Missing requirements):**
@@ -94,8 +90,6 @@ You are a Quality Engineer. Generate unit tests for the `Button` component in #r
 ```
 
 **Expected result:** Copilot proposes tests covering a click when `isLoading` is false and the disabled state when `isLoading` is true.
-
-**Why it works:** Specifying the testing framework (Vitest) and the pattern (AAA) results in code that matches your team's style guide immediately, saving time on manual cleanup.
 
 **Practice**
 

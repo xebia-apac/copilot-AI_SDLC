@@ -268,32 +268,6 @@ If required files, tools, permissions, or configuration are unavailable, record 
 
 ---
 
-## Workshop Complete! 🎉
-
-You have completed the full E2E SDLC using GitHub Copilot:
-
-| Phase | Output |
-|-------|--------|
-| Planning | `doc/brd.md`, `doc/tsd.md`, `doc/frd.md` |
-| Project Management | GitHub Issues via MCP |
-| Development | `src/` — REST APIs with task management and dependencies; authentication is included only if implemented by the approved TSD/FRD |
-| Database | `db/migrations/`, `db/procedures/`, PostgreSQL/PL/pgSQL procedures when the optional database path is enabled |
-| Testing | `tests/` — unit + integration tests from FRD acceptance criteria |
-| Security | OWASP review report, vulnerability fixes |
-| Infrastructure | `infra/` — Docker, Bicep/Terraform, GitHub Actions CI/CD |
-
----
-
-## What to Explore Next
-
-| Topic | How |
-|-------|-----|
-| Claude or GPT-4o as base model | Change model in Copilot Chat settings |
-| Custom skill for API docs | Create `.github/skills/api-docs/SKILL.md` |
-| Automated PR review agent | Create `.github/agents/code-review.agent.md` |
-| Prompt for performance profiling | Add `.github/prompts/performance-review.prompt.md` |
-| Pre-commit security hook | Create `.github/hooks/pre-commit.json` |
-
 ---
 
 **Return to**: [Workshop Overview (README.md)](../README.md)

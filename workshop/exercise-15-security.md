@@ -155,10 +155,6 @@ If no generated code exists, create a review plan or report template only; do no
 
 ---
 
-## Key Takeaway
-
-> Security built into the workflow — not bolted on after — is what OWASP recommends as "Shift Left Security." By encoding the OWASP checklist in a reusable prompt file, your team runs the same security review every sprint, every PR. The prompt captures institutional knowledge about *what to look for* so no security engineer knowledge needs to be in every developer's head.
-
 ---
 
 **Next**: [Exercise 16 — Build & Debug](exercise-16-build-debug.md)

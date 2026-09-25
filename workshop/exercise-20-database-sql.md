@@ -225,10 +225,6 @@ If PostgreSQL, the migration runner, or database credentials are unavailable, co
 
 ---
 
-## Key Takeaway
-
-> Copilot understands PostgreSQL DDL and PL/pgSQL. By anchoring the schema and migration work to the TSD's ER diagram and the business rules from the FRD, you get database code that matches your requirements — not generic boilerplate. The optional advanced procedures and triggers can encode additional database-layer business rules when the TSD/FRD requires them.
-
 ---
 
 **Return to Mandatory Track →**: [Exercise 16 — Build & Debug with the Local Agent](exercise-16-build-debug.md)

@@ -95,10 +95,6 @@ Once Copilot finishes, open `doc/brd.md` and check:
 
 ---
 
-## Key Takeaway
-
-> The BRD agent gives Copilot a **persistent, reusable role**. Compare this to asking the default agent "write a BRD" — you'd need to re-explain the structure every time. Agents encode your standards once and apply them consistently.
-
 ---
 
 **Next**: [Exercise 07 — Generate TSD](exercise-07-tsd.md)

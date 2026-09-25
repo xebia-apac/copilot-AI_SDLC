@@ -163,22 +163,6 @@ If the context map or Chat context is unavailable, ask the questions using the a
 
 ---
 
-## Why This Matters
-
-In future prompts, prefix complex requests with:
-
-```
-Reference the context map at .github/skills/context-map/context-map.md for codebase context, then...
-```
-
-This single addition significantly reduces hallucinations (Copilot inventing file paths or function names) because it has accurate, up-to-date codebase knowledge.
-
----
-
-## Key Takeaway
-
-> Skills are **reusable processes**, not instructions or conversation. The Context Map skill is a good first skill for every project — it creates a shared mental model between you and Copilot about your codebase. You run it once (and re-run it as the codebase grows), and it pays dividends across every subsequent interaction.
-
 ---
 
 **Next optional**: [Exercise 20 — Database & SQL / PL/pgSQL](exercise-20-database-sql.md)

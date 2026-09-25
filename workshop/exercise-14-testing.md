@@ -224,10 +224,6 @@ The generated tests match the available API/UI contracts, use the selected frame
 
 ---
 
-## Key Takeaway
-
-> When Copilot writes tests from the FRD's Gherkin criteria, the tests become a **living specification**. Every test failure tells you exactly which user story is broken. This is the promise of Behavior-Driven Development — and Copilot makes it practical by eliminating the tedious work of writing the test boilerplate.
-
 ---
 
 **Next**: [Exercise 15 — Security Review](exercise-15-security.md)

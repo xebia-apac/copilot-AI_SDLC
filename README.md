@@ -151,17 +151,4 @@ SDLC2/
 
 ---
 
-## Further Learning — Try next
-
-Explore these exercises to go deeper on the Copilot features:
-
-- [Integrate MCP with Copilot](https://github.com/skills/integrate-mcp-with-copilot) — Connect Model Context Protocol servers to extend Copilot with external tools and data sources
-- [Create Applications with the Copilot CLI](https://github.com/skills/create-applications-with-the-copilot-cli) — Use GitHub Copilot CLI to scaffold and build applications from the terminal
-- [Scale Institutional Knowledge using Copilot Spaces](https://github.com/skills/scale-institutional-knowledge-using-copilot-spaces) — Organise team knowledge and context into Copilot Spaces for consistent, organisation-wide AI assistance
-- [Idea to App with Copilot Spark](https://github.com/skills/idea-to-app-with-spark) — Go from a natural language idea to a deployed application using Copilot Spark
-- [Expand Your Team with the Copilot Coding Agent](https://github.com/skills/expand-your-team-with-copilot) — Delegate tasks to the Copilot coding agent and collaborate with it like a team member
-
----
-
-
 > **Instructor Note**: Each exercise has a `> Instructor Guide` section visible only in the markdown source. Exercises are designed so attendees never need to copy code — they copy **prompts** and let Copilot generate the output.

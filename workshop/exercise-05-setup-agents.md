@@ -376,10 +376,6 @@ Use the manual file checks above and consult the current VS Code/Copilot custom-
 
 ---
 
-## Key Takeaway
-
-> Custom agents let you preload domain expertise, tool restrictions, and output format into Copilot. Instead of repeating "you are a business analyst, output to this file, follow this structure" — you save it once as an agent and reuse it across projects.
-
 ---
 
 **Next**: [Exercise 06 — Generate BRD](exercise-06-brd.md)

@@ -86,10 +86,6 @@ These three documents form the **specification foundation** for all remaining ex
 
 ---
 
-## Key Takeaway
-
-> Notice how each agent built on the previous output. BRD → TSD → FRD is the natural SDLC chain, and each agent was pre-wired to read the prior document. This is the power of **document-driven agentic workflows** — Copilot maintains context across the entire specification phase without you having to copy-paste content.
-
 ---
 
 **Next**: [Exercise 09 — Create Custom Instructions](exercise-09-custom-instructions.md)

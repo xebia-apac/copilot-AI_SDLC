@@ -134,10 +134,6 @@ The project-specific prompt references the ITMS stack and folders, while the gen
 
 ---
 
-## Key Takeaway
-
-> Prompt files turn one-time instructions into team assets. Instead of one person knowing "the right way to ask Copilot for an implementation plan," the whole team can share a project-specific prompt and invoke it when the current Copilot environment supports prompt-file discovery.
-
 ---
 
 **Next**: [Exercise 12 — Build APIs with Local Agent](exercise-12-api-local-agent.md)

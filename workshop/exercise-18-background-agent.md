@@ -165,10 +165,6 @@ If no branch, changes, or pull request is provided, preserve the Background Agen
 
 ---
 
-## Key Takeaway
-
-> Background Agent is a **parallel workstream**. On a real project, you might assign 4–5 long tasks to background agents (e.g., write all CRUD for users, write all CRUD for task priorities, write all notifications, generate all tests) while you focus on the complex business logic. Each session may provide a branch or PR for review, depending on the environment; review and merge only when supported and appropriate. This can compress long-running work into parallel review cycles.
-
 ---
 
 **Next optional**: [Exercise 19 — Context Map Skill](exercise-19-context-map.md)

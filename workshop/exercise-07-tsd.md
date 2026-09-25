@@ -96,10 +96,6 @@ The Integration Points section is updated with the requested SendGrid, Teams, me
 
 ---
 
-## Key Takeaway
-
-> The architecture designed here becomes the **source of truth** for the next exercises. Every API you build, every table you create, and every test you write will trace back to `doc/tsd.md`. This is how Copilot becomes a true SDLC co-pilot — not just a code generator, but an architectural collaborator.
-
 ---
 
 **Next**: [Exercise 08 — Generate FRD](exercise-08-frd.md)

@@ -231,10 +231,6 @@ The expected UI structure exists, its components map to FRD/UC references, and i
 
 ---
 
-## Key Takeaway
-
-> The same document-driven workflow — **FRD → architecture → prompt → Copilot generates** — works equally well for UI as it did for the API. You did not write a single component from scratch; you directed Copilot by referencing the FRD use cases and the exact API routes already in your workspace. This is how Copilot accelerates the *full* SDLC, not just backend code.
-
 ---
 
 **Next**: [Exercise 14 — Unit & Functional Tests](exercise-14-testing.md)

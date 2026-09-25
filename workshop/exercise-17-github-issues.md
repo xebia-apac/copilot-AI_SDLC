@@ -178,10 +178,6 @@ Skip this optional step when project-board tools or the current GitHub Projects 
 
 ---
 
-## Key Takeaway
-
-> The MCP transforms Copilot from a **code editor tool** into a **project management tool**. Going from a Functional Requirements Document to a structured, labelled, milestoned GitHub issue backlog in approximately 15–25 minutes in a preconfigured environment is the kind of productivity multiplier that changes how teams operate. The same MCP can later be used to track progress, comment on issues, and link PRs — all from chat.
-
 ---
 
 **Return to Mandatory Track →**: [Exercise 12 — Build APIs with Local Agent](exercise-12-api-local-agent.md)

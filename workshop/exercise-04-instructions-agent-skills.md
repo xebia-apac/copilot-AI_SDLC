@@ -118,27 +118,6 @@ Prompts (`*.prompt.md`) are reusable snippets of text that you can inject into a
 >
 > Use the prompt text directly in Chat and keep the file for future sessions. Command names and discovery behavior can vary by VS Code and Copilot version.
 
-## How the artifacts work together
-
-Think of these artifacts as complementary layers:
-
-1. **Instructions** lay the groundwork with long-lived guardrails.
-2. **Prompts** provide quick, reusable shortcuts for common tasks.
-3. **Skills** let you trigger rich, reusable workflows on demand—and let agents discover those workflows automatically.
-4. **Agents** bring the most opinionated behavior, bundling tools and instructions into a single persona.
-
-By combining all four, teams can achieve:
-
-- Consistent onboarding for new developers.
-- Repeatable operations tasks with reduced context switching.
-- Tailored experiences for specialized domains (security, infrastructure, data science, etc.).
-
-## Next steps
-
-- Explore the rest of the **Fundamentals** track for deeper dives on chat modes, collections, and MCP servers.
-- Browse the [Awesome Agents](https://awesome-copilot.github.com/agents/), [Skills](https://awesome-copilot.github.com/skills/), and [Instructions](https://awesome-copilot.github.com/instructions/) directories for inspiration.
-- Try generating your own artifacts, then add them to the repo to keep the Learning Hub evolving.
-
 ---
 
 **Next**: [Exercise 05 — Setup & Create Custom Agents](exercise-05-setup-agents.md)

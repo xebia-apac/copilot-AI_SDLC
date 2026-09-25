@@ -375,13 +375,6 @@ After the database repository and configuration changes are implemented and veri
 
 ---
 
-## Key Takeaway
-
-Two things to notice:
-
-1. **Standards enforcement** — when `.github/copilot-instructions.md` is available and applies, verify that the agent follows its response-envelope, input-validation, and structured-logging guidance.
-2. **Repository abstraction** — after the optional database repository and configuration changes are implemented, the service and controller contracts can remain the same while the data layer changes.
-
 ---
 
 **Next**: [Exercise 13 — Design & Scaffold the UI](exercise-13-ui-design.md)

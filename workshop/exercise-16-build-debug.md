@@ -194,10 +194,6 @@ Tell me which is wrong — the test or the implementation — before making any 
 
 ---
 
-## Key Takeaway
-
-> The local agent's superpower is the **terminal + code edit + reasoning** combination. A human debugger reads an error, opens the file, makes a change, saves, rebuilds, checks the output. The local agent does this loop autonomously, maintaining context across multiple iterations. The key practice is to give it a **goal** ("all tests pass") rather than micro-managing each step.
-
 ---
 
 **Next**: [Exercise 21 — IaC & CI/CD (Optional)](exercise-21-iac-cicd.md)

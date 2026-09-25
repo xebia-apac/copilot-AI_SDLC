@@ -119,10 +119,6 @@ If the response does not follow the selected conventions, verify that the worksp
 
 ---
 
-## Key Takeaway
-
-> Instructions set the **floor** for code quality. Once written, you can avoid repeating "use TypeScript", "use parameterized queries", or "follow REST conventions" when Copilot applies the workspace instructions to a matching request.
-
 ---
 
 **Next**: [Exercise 10 — Plan Mode for Implementation](exercise-10-plan-mode.md)
