@@ -1,6 +1,6 @@
 # Exercise 03 — Prompt Engineering Workshop
 
-**Duration**: 5 minutes | **Goal**: Learn the four pillars of strong prompts.
+**Duration**: Approximately 8 minutes in a preconfigured environment | **Goal**: Learn the four pillars of strong prompts.
 
 ---
 
@@ -29,9 +29,20 @@ The synergy of these pillars ensures that the AI understands not just *what* to 
 ---
 
 ### Open Copilot Chat in Ask Mode
-1. Open Copilot Chat: Ctrl+Alt+I (Windows/Linux) or Cmd+Option+I (macOS).
-2. In the mode selector, choose Ask.
-3. Keep Ask mode for all prompts in this exercise.
+
+**Action**
+
+1. Complete Exercise 01 and confirm that Copilot Chat opens and responds.
+2. Open Copilot Chat using the Chat icon, the configured Chat shortcut, or the Command Palette. Keyboard shortcuts and UI labels can vary by VS Code and Copilot version.
+3. Select **Ask** mode if a mode selector is available. Keep it active for the prompts in this exercise.
+
+**Expected result**
+
+Copilot Chat is open and ready for the prompt comparisons in this exercise.
+
+**If unavailable**
+
+If Ask mode is not shown, continue in the default conversational Chat mode.
 
 ## Build Strong Prompts: Vague → Improved
 
@@ -43,10 +54,12 @@ Write a function to format dates.
 ```
 
 **Improved Prompt (Combining Context, Intent, Clarity, and Specificity):**
-Open [workshop/sample-data/date_utils.js](../workshop/sample-data/date_utils.js) and use this prompt in Chat:
+Open [workshop/sample-data/date_utils.js](../workshop/sample-data/date_utils.js), add it to Chat context if needed, and use this prompt in Chat:
 ```
-You are a specialist in internationalization building a financial dashboard in a Node.js environment. Refactor the `formatDate` function in #file:date_utils.js to format ISO date strings. The function should take a date string and a locale as arguments and return the date in 'DD-MMM-YYYY' format (e.g., 19-Mar-2026). Ensure it handles null or invalid date inputs by returning an empty string.
+You are a specialist in internationalization building a financial dashboard in a Node.js environment. Refactor the `formatDate` function in #file:date_utils.js to accept ISO 8601 date strings and return/display them in 'DD-MMM-YYYY' format (e.g., 19-Mar-2026). The function should take a date string and a locale as arguments. Use the locale where appropriate, and ensure it handles null or invalid date inputs by returning an empty string.
 ```
+
+**Expected result:** Copilot proposes a refactored function with the requested arguments, output format, locale handling, and invalid-input behavior.
 
 **Why it works:** By providing the environment (Node.js) and a persona (i18n specialist), you ensure the AI uses relevant libraries. Explicitly defining edge case behavior (null inputs) prevents bugs in the generated code.
 
@@ -58,10 +71,12 @@ Make this code better.
 ```
 
 **Improved Prompt (Refining via Progressive Disclosure):**
-Open [workshop/sample-data/process_legacy_data.py](../workshop/sample-data/process_legacy_data.py) and use this prompt in Chat:
+Open [workshop/sample-data/process_legacy_data.py](../workshop/sample-data/process_legacy_data.py), add it to Chat context if needed, and use this prompt in Chat:
 ```
-Act as a performance tuning expert. Refactor the `process_data` function in #file:process_legacy_data.py to improve performance and readability. Use the `pandas` library instead of the standard `csv` module to minimize memory usage for files up to 1GB. Provide a brief explanation of the structural changes you made.
+Act as a performance tuning expert. Refactor the `process_data` function in #file:process_legacy_data.py to improve performance and readability. Use the `pandas` library where appropriate for CSV files up to 1GB, explain the memory trade-offs or chunking strategy, and provide a brief explanation of the structural changes you made.
 ```
+
+**Expected result:** Copilot proposes a clearer refactoring and explains the performance and memory trade-offs instead of assuming that pandas always uses less memory.
 
 **Why it works:** "Better" is vague; specifying "performance" and "memory usage" gives the AI a clear optimization target. Restricting the toolset to `pandas` ensures the output fits your technical stack.
 
@@ -73,33 +88,47 @@ Write tests for my component.
 ```
 
 **Improved Prompt (Using Output Specification):**
-Open [workshop/sample-data/Button.jsx](../workshop/sample-data/Button.jsx) and use this prompt in Chat:
+Open [workshop/sample-data/Button.jsx](../workshop/sample-data/Button.jsx), add it to Chat context if needed, and use this prompt in Chat:
 ```
 You are a Quality Engineer. Generate unit tests for the `Button` component in #file:Button.jsx using Vitest and React Testing Library. Follow the Arrange-Act-Assert (AAA) pattern. Ensure you test that the click handler is called when NOT loading, and that the button is disabled when the `isLoading` prop is true. Provide the code in a single file block with all necessary imports.
 ```
 
-**Why it works:** Specifying the testing framework (Vitest) and the pattern (AAA) results in code that matches your team's style guide immediately, saving time on manual cleanup.
+**Expected result:** Copilot proposes tests covering a click when `isLoading` is false and the disabled state when `isLoading` is true.
 
 **Why it works:** Specifying the testing framework (Vitest) and the pattern (AAA) results in code that matches your team's style guide immediately, saving time on manual cleanup.
 
-**Practice**: Try comparing the output of a vague prompt versus an improved prompt in Copilot Chat. Notice how the improved prompt reduces follow-up questions and provides more relevant code.
+**Practice**
+
+**Action:** Compare the output of a vague prompt with the corresponding improved prompt in Copilot Chat.
+
+**Expected result:** The improved prompt produces a more relevant response with fewer follow-up questions or missing requirements.
 
 ---
 
 ## Two Prompting Techniques
 
 **Technique 1 — Progressive Disclosure:**
+
+**Action:** Send the following prompt, then send each follow-up in order:
+
 ```
 You are a Python developer. Write password validation function.
 ```
 Follow-up: `Now add: min 8 chars, 1 uppercase, 1 number, 1 special char.`
 Follow-up: `Add 5 pytest test cases.`
 
+**Expected result:** Each follow-up adds constraints to the same password-validation task, ending with five pytest cases.
+
 **Technique 2 — Output Specification:**
+
+**Action:** Send:
+
 ```
 You are a DevOps Engineer. Compare REST vs GraphQL.
 Output: markdown table, columns: Feature | REST | GraphQL | Best for. Keep 2-3 words per cell.
 ```
+
+**Expected result:** Copilot returns a concise Markdown table with the requested columns and short cell values.
 
 
 ---

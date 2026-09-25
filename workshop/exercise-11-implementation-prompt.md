@@ -1,6 +1,6 @@
 # Exercise 11 — Create an Implementation Prompt File
 
-**Duration**: 3 minutes  
+**Duration**: Approximately 7 minutes in a preconfigured environment
 **Copilot Feature**: Prompt Files (`.prompt.md`)  
 **Goal**: Package your implementation plan into a reusable prompt file that any team member can invoke.
 
@@ -15,9 +15,15 @@ A **Prompt File** (`.prompt.md`) in GitHub Copilot is a saved, reusable prompt. 
 
 The **Implementation Plan prompt file** you create here captures the standard way to generate a development plan from the FRD for this project — and any future project following the same process.
 
+## Prerequisite
+
+Complete Exercises 09–10 and confirm that `doc/frd.md`, `doc/tsd.md`, `doc/implementation-plan.md`, and `.github/copilot-instructions.md` exist. Open this repository as a trusted VS Code workspace with Copilot Chat available.
+
 ---
 
 ## Step 1 — Understand the Prompt File Format
+
+**Action**
 
 A `.prompt.md` file looks like this:
 
@@ -32,30 +38,41 @@ description: "When to use this prompt"
 Instructions for Copilot...
 ```
 
-The `description` field is what you see in the command palette when typing `/`.
+The `description` field may appear in the prompt picker when typing `/`, depending on the current VS Code/Copilot version.
+
+**Expected result**
+
+You can identify the YAML frontmatter and prompt body that a reusable prompt file requires. Prompt-picker labels and discovery behavior can vary by VS Code/Copilot version.
 
 ---
 
 ## Step 2 — Inspect the Pre-Built Prompt File
 
-The workshop already includes a prompt file at `.github/prompts/implementation-plan.prompt.md`.
+**Action**
 
-Open it and read it. Notice:
+Open and read the existing prompt file at `.github/prompts/implementation-plan.prompt.md`. Notice:
 - The YAML frontmatter with `name` and `description`
 - Instructions for structuring phases and task tables
 - Rules about referencing FRD IDs and flagging Background Agent candidates
+
+**Expected result**
+
+The prebuilt prompt file exists and contains valid frontmatter plus implementation-plan instructions.
 
 ---
 
 ## Step 3 — Create a Custom Project-Specific Version
 
-Now create **your own** version tailored to your chosen tech stack. In Copilot Chat (local agent), send:
+**Action**
 
-Use ```/create-prompt``` with name ```itms-implementation-plan``` and paste the following content:
+Now create **your own** version tailored to your chosen tech stack. In Copilot Chat, use the prompt-file creation command if it is available, or create `.github/prompts/itms-implementation-plan.prompt.md` manually with the frontmatter and content below:
+
+If the current Chat UI provides a prompt-file creation command, use it with the name `itms-implementation-plan` and paste the following content:
+
 ```
 This prompt is specifically for the Intelligent Task Management System (ITMS) project.
 When invoked, it should:
-1. Read #frd.md and #tsd.md
+1. Read #file:doc/frd.md and #file:doc/tsd.md
 2. Generate a phased implementation plan with our specific tech stack: [YOUR STACK e.g. TypeScript/Express/PostgreSQL]
 3. Reference the correct folder structure: src/routes/, src/services/, src/repositories/, src/models/
 4. Include database migration tasks using our tooling convention
@@ -67,24 +84,51 @@ Format: phases as H2 headers, tasks as a table with columns: ID | Task | Effort 
 
 > Replace `[YOUR STACK]` with your choice from Exercise 09.
 
+**Expected result**
+
+`.github/prompts/itms-implementation-plan.prompt.md` exists with prompt-file frontmatter, the selected stack, the correct `doc/frd.md` and `doc/tsd.md` context references, and the requested output format.
+
+**If unavailable**
+
+If no prompt-file creation command is available, create the file manually using this structure:
+
+```markdown
+---
+name: ITMS Implementation Plan
+description: "Generate an ITMS implementation plan from the FRD and TSD."
+---
+
+[Paste the project-specific prompt content above here.]
+```
+
 ---
 
 ## Step 4 — Use the Prompt File
 
-Test your new prompt file:
+**Action**
 
-1. In Copilot Chat, type `/` — the command palette opens
-2. Type `itms` — you should see **itms-implementation-plan** appear
-3. Select it and press Enter
-4. Copilot executes the prompt and generates a fresh implementation plan
+1. In Copilot Chat, type `/` and review the available prompt commands.
+2. Search for `itms-implementation-plan` using the current prompt picker.
+3. If it appears, select it and submit the prompt.
+4. If it does not appear, refresh or reopen the workspace and verify the file location and frontmatter. You can also paste the prompt-file body into regular Chat.
+
+**Expected result**
+
+When prompt files are supported and discovered, `itms-implementation-plan` is available for selection and produces a fresh implementation plan when invoked. The exact picker label and invocation behavior depend on the current VS Code/Copilot version.
 
 ---
 
 ## Step 5 — Compare the Two Outputs
 
-Notice the difference between:
+**Action**
+
+Compare the intent and context of:
 - The generic `.github/prompts/implementation-plan.prompt.md` (for any project)
 - Your project-specific `itms-implementation-plan.prompt.md` (ITMS-specific folder conventions, stack, tools)
+
+**Expected result**
+
+The project-specific prompt references the ITMS stack and folders, while the generic prompt remains reusable across projects.
 
 > This is why teams maintain both generic prompt libraries and project-specific ones.
 
@@ -92,7 +136,7 @@ Notice the difference between:
 
 ## Key Takeaway
 
-> Prompt files turn one-time instructions into team assets. Instead of one person knowing "the right way to ask Copilot for an implementation plan," the whole team has a `/itms-implementation-plan` command they can invoke consistently. This is how you scale Copilot adoption across a team.
+> Prompt files turn one-time instructions into team assets. Instead of one person knowing "the right way to ask Copilot for an implementation plan," the whole team can share a project-specific prompt and invoke it when the current Copilot environment supports prompt-file discovery.
 
 ---
 

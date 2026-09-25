@@ -1,7 +1,7 @@
 # E2E SDLC with GitHub Copilot — Workshop
 
 > **Audience**: Developers, Tech Leads, Architects  
-> **Total Duration**: ~55 min mandatory + ~30 min optional (see two-track map below)  
+> **Workshop format**: A guided instructor/demo path can cover the complete Copilot SDLC flow in the planned session. The full hands-on path covers Exercises 01–16 and should be completed at the participant's own pace.
 > **Pre-requisites**: VS Code with GitHub Copilot Chat extension, Node/Python/Java runtime, Git CLI, GitHub Copilot access, GitHub MCP, Mermaid extension for VS code.
 
 ---
@@ -41,11 +41,11 @@ Participants should have the following set up before starting the workshop:
 
 ## Workshop Map
 
-> **Two-Track Design**: Complete the **Mandatory Track** first (~50 min) — it covers every SDLC phase end-to-end with no gaps. Then pick any **Optional** exercises based on time and interest. Optional exercises are self-contained; no mandatory exercise depends on them.
+> **Two-Track Design**: Complete the **Mandatory Track** first — it covers every SDLC phase end-to-end with no gaps. Then pick any **Optional** exercises based on time and interest. Optional exercises are self-contained; no mandatory exercise depends on them.
 
 ---
 
-### 🔵 Mandatory Track (~55 minutes)
+### 🔵 Mandatory Track — Exercises 01–16
 
 These exercises form the core SDLC journey. Each builds directly on the previous one and introduces a distinct GitHub Copilot feature.
 
@@ -68,11 +68,11 @@ These exercises form the core SDLC journey. Each builds directly on the previous
 | 15 | [Security Review](workshop/exercise-15-security.md) | Security Prompt File | 4 min |
 | 16 | [Build & Debug](workshop/exercise-16-build-debug.md) | Local Agent + Terminal | 5 min |
 
-> **Why these 12?** They cover every key Copilot feature — Custom Agents → Prompt Files → Plan Mode → Local Agent → Testing → Security → UI Scaffolding — mirroring a real end-to-end SDLC from requirements to a running, full-stack application.
+> These mandatory exercises form the core SDLC journey: setup, Chat, prompting, Copilot artifacts, requirements, planning, implementation, UI, testing, security, and build/debug.
 
 ---
 
-### 🟡 Optional Track (~30 minutes — pick any, in any order)
+### 🟡 Optional Track — Exercises 17–21
 
 These exercises are self-contained. No mandatory exercise depends on them. Complete them if time allows, or revisit them after the workshop.
 
@@ -96,7 +96,7 @@ These exercises are self-contained. No mandatory exercise depends on them. Compl
 
 ```
 SDLC2/
-├── req.md                          ← Starting requirement (provided)
+├── requirement.md                  ← Starting requirement (provided)
 ├── doc/
 │   ├── brd.md                      ← Generated in Exercise 06
 │   ├── tsd.md                      ← Generated in Exercise 07
@@ -109,10 +109,11 @@ SDLC2/
 │   │   ├── frd.agent.md            ← Created in Exercise 05
 │   │   └── devops.agent.md         ← Created in Exercise 21
 │   └── prompts/
-    ├── implementation-plan.prompt.md  ← Created in Exercise 11
-        ├── github-issues.prompt.md        ← Created in Exercise 17
-        └── security-review.prompt.md      ← Created in Exercise 15
-├── .github/skills/context-map/     ← Created in Exercise 19
+│       ├── implementation-plan.prompt.md  ← Created in Exercise 11
+│       ├── github-issues.prompt.md        ← Created in Exercise 17
+│       └── security-review.prompt.md      ← Created in Exercise 15
+├── .github/skills/
+│   └── context-map/                ← Created in Exercise 19
 ├── src/                            ← API code created in Exercise 12+
 ├── ui/                             ← Frontend scaffolded in Exercise 13
 ├── tests/                          ← Tests created in Exercise 14
