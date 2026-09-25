@@ -56,7 +56,7 @@ Write a function to format dates.
 **Improved Prompt (Combining Context, Intent, Clarity, and Specificity):**
 Open [workshop/sample-data/date_utils.js](../workshop/sample-data/date_utils.js), add it to Chat context if needed, and use this prompt in Chat:
 ```
-You are a specialist in internationalization building a financial dashboard in a Node.js environment. Refactor the `formatDate` function in #file:date_utils.js to accept ISO 8601 date strings and return/display them in 'DD-MMM-YYYY' format (e.g., 19-Mar-2026). The function should take a date string and a locale as arguments. Use the locale where appropriate, and ensure it handles null or invalid date inputs by returning an empty string.
+You are a specialist in internationalization building a financial dashboard in a Node.js environment. Refactor the `formatDate` function in #readFile:date_utils.js to accept ISO 8601 date strings and return/display them in 'DD-MMM-YYYY' format (e.g., 19-Mar-2026). The function should take a date string and a locale as arguments. Use the locale where appropriate, and ensure it handles null or invalid date inputs by returning an empty string.
 ```
 
 **Expected result:** Copilot proposes a refactored function with the requested arguments, output format, locale handling, and invalid-input behavior.
@@ -73,7 +73,7 @@ Make this code better.
 **Improved Prompt (Refining via Progressive Disclosure):**
 Open [workshop/sample-data/process_legacy_data.py](../workshop/sample-data/process_legacy_data.py), add it to Chat context if needed, and use this prompt in Chat:
 ```
-Act as a performance tuning expert. Refactor the `process_data` function in #file:process_legacy_data.py to improve performance and readability. Use the `pandas` library where appropriate for CSV files up to 1GB, explain the memory trade-offs or chunking strategy, and provide a brief explanation of the structural changes you made.
+Act as a performance tuning expert. Refactor the `process_data` function in #readFile:process_legacy_data.py to improve performance and readability. Use the `pandas` library where appropriate for CSV files up to 1GB, explain the memory trade-offs or chunking strategy, and provide a brief explanation of the structural changes you made.
 ```
 
 **Expected result:** Copilot proposes a clearer refactoring and explains the performance and memory trade-offs instead of assuming that pandas always uses less memory.
@@ -90,7 +90,7 @@ Write tests for my component.
 **Improved Prompt (Using Output Specification):**
 Open [workshop/sample-data/Button.jsx](../workshop/sample-data/Button.jsx), add it to Chat context if needed, and use this prompt in Chat:
 ```
-You are a Quality Engineer. Generate unit tests for the `Button` component in #file:Button.jsx using Vitest and React Testing Library. Follow the Arrange-Act-Assert (AAA) pattern. Ensure you test that the click handler is called when NOT loading, and that the button is disabled when the `isLoading` prop is true. Provide the code in a single file block with all necessary imports.
+You are a Quality Engineer. Generate unit tests for the `Button` component in #readFile:Button.jsx using Vitest and React Testing Library. Follow the Arrange-Act-Assert (AAA) pattern. Ensure you test that the click handler is called when NOT loading, and that the button is disabled when the `isLoading` prop is true. Provide the code in a single file block with all necessary imports.
 ```
 
 **Expected result:** Copilot proposes tests covering a click when `isLoading` is false and the disabled state when `isLoading` is true.

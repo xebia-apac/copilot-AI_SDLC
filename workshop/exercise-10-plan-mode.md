@@ -43,7 +43,7 @@ If Plan mode is not shown, send the planning prompt in regular Chat and explicit
 Copy and paste this prompt into Chat:
 
 ```
-Read #file:doc/frd.md and #file:doc/tsd.md carefully.
+Read #readFile:doc/frd.md and #readFile:doc/tsd.md carefully.
 
 Generate a complete, phased implementation plan for the Intelligent Task Management System (ITMS).
 
@@ -69,7 +69,7 @@ For each phase, list tasks with:
 Do NOT create any files yet. Show me the plan first.
 ```
 
-If either `#file` reference is not recognized, attach `doc/frd.md` and `doc/tsd.md` using the current Chat context control and send the same request referring to the attached files.
+If either `#readFile` reference is not recognized, attach `doc/frd.md` and `doc/tsd.md` using the current Chat context control and send the same request referring to the attached files.
 
 **Expected result**
 

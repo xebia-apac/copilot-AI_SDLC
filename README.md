@@ -35,7 +35,7 @@ Participants should have the following set up before starting the workshop:
 - Node/Python/Java runtime/.net SDK (depending on your language choice)
 - GitHub Copilot access
 - [Git CLI](https://git-scm.com/install/)
-- [GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli/install-copilot-cli)
+- [GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli/install-copilot-cli) (optional; only needed for terminal-based workflows where explicitly mentioned)
 - [GitHub MCP](https://github.com/mcp/github/github-mcp-server)
 - [Mermaid extension](https://marketplace.visualstudio.com/items?itemName=MermaidChart.vscode-mermaid-chart) for VS code
 
@@ -81,11 +81,11 @@ These exercises are self-contained. No mandatory exercise depends on them. Compl
 | 17 | [Create GitHub Issues via MCP](workshop/exercise-17-github-issues.md) | GitHub MCP + Prompt File | 5 min | Ex 11 |
 | 18 | [Background Agent Task](workshop/exercise-18-background-agent.md) | Background Agent | 3 min | Ex 12 |
 | 19 | [Context Map Skill](workshop/exercise-19-context-map.md) | Skills (`SKILL.md`) | 4 min | Ex 12 |
-| 20 | [Database & SQL / PL/SQL](workshop/exercise-20-database-sql.md) | Local Agent + Instructions | 5 min | Ex 19 |
+| 20 | [Database & SQL / PL/pgSQL](workshop/exercise-20-database-sql.md) | Local Agent + Instructions | 5 min | Ex 19 |
 | 21 | [IaC & CI/CD](workshop/exercise-21-iac-cicd.md) | Custom Agent + Prompt File | 5 min | Ex 16 |
 
 > **Note on Ex 17**: Requires a GitHub repository and a Personal Access Token with `repo` and `issues` scopes. Skip if GitHub MCP is not pre-configured in your environment.
-> **Note on Ex 20**: References the context map from Ex 19. If you skip Ex 19, remove the `#context-map.md` reference from the prompts before sending.
+> **Note on Ex 20**: References the context map from Ex 19. If you skip Ex 19, remove the `#readFile:.github/skills/context-map/context-map.md` reference from the prompts before sending.
 
 ---
 > The workshop has been tested with the following AI models on GitHub Copilot: `Claude Sonnet 4.6`,`GPT-5.3-codex`. Results may vary with different models. If you encounter issues, try switching to one of these models in your Copilot settings.
@@ -109,9 +109,9 @@ SDLC2/
 │   │   ├── frd.agent.md            ← Created in Exercise 05
 │   │   └── devops.agent.md         ← Created in Exercise 21
 │   └── prompts/
-│       ├── implementation-plan.prompt.md  ← Created in Exercise 11
-│       ├── github-issues.prompt.md        ← Created in Exercise 17
-│       └── security-review.prompt.md      ← Created in Exercise 15
+│       ├── implementation-plan.prompt.md  ← Pre-provided starter prompt; used in Exercise 11
+│       ├── github-issues.prompt.md        ← Pre-provided starter prompt; used in Exercise 17
+│       └── security-review.prompt.md      ← Pre-provided starter prompt; used in Exercise 15
 ├── .github/skills/
 │   └── context-map/                ← Created in Exercise 19
 ├── src/                            ← API code created in Exercise 12+

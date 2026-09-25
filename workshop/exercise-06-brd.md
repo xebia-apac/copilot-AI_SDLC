@@ -42,7 +42,7 @@ Refresh or reopen the workspace and confirm that `.github/agents/brd.agent.md` h
 Copy and paste the following prompt into Chat:
 
 ```
-Read the project requirements from #file:requirement.md and create a comprehensive Business Requirements Document. Save it as doc/brd.md.
+Read the project requirements from #readFile:requirement.md and create a comprehensive Business Requirements Document. Save it as doc/brd.md.
 
 Make sure to:
 - Number all requirements uniquely (BR-F-001, BR-NF-001, BR-R-001...)
@@ -52,7 +52,7 @@ Make sure to:
 - Keep it suitable for business and non-technical stakeholders
 ```
 
-If `#file:requirement.md` is not recognized, attach `requirement.md` using the current Chat context control and send the same prompt referring to the attached file.
+If `#readFile:requirement.md` is not recognized, attach `requirement.md` using the current Chat context control and send the same prompt referring to the attached file.
 
 **Expected result**
 

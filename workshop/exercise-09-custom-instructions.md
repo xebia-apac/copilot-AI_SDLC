@@ -57,7 +57,7 @@ Include instructions covering:
 2. API design rules: versioning (/api/v1/), consistent response envelope { success, data, error, meta }
 3. Error handling: custom error classes, centralized error middleware, proper HTTP status codes
 4. Security: always validate input with a schema library, never trust user input, use parameterized queries only
-5. Database: use migrations for schema changes, use a query builder or ORM — no raw string SQL queries
+5. Database: use migrations for schema changes, use a query builder or ORM — no raw string SQL queries in application code; Exercise 20 may create and use its required PostgreSQL SQL/PL/pgSQL artifacts
 6. Testing: every new function must have a unit test, integration tests for all API endpoints
 7. Logging: structured JSON logs with request ID, user ID, and operation name
 8. Code style: no console.log in production code, no TODO comments without ticket numbers, functions under 30 lines

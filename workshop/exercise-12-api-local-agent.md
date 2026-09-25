@@ -45,7 +45,7 @@ If the selector labels differ, choose the workspace-local coding agent that has 
 Send this prompt in Agent mode:
 
 ```
-Read #file:doc/tsd.md and the API Design section when doc/tsd.md is available. Also read #file:requirement.md and the selected stack in .github/copilot-instructions.md when that file is available. Then scaffold the initial project
+Read #readFile:doc/tsd.md and the API Design section when doc/tsd.md is available. Also read #readFile:requirement.md and the selected stack in .github/copilot-instructions.md when that file is available. Then scaffold the initial project
 structure for the ITMS REST API:
 
 - Root config file (package.json / pyproject.toml / pom.xml — match the stack
@@ -66,7 +66,7 @@ structure for the ITMS REST API:
 Do NOT implement any business logic yet — scaffolding only.
 ```
 
-If a `#file` reference is not recognized, attach the available document using the current Chat context control. If `doc/tsd.md` or `.github/copilot-instructions.md` is unavailable, tell the agent to use `requirement.md` and your selected stack explicitly.
+If a `#readFile` reference is not recognized, attach the available document using the current Chat context control. If `doc/tsd.md` or `.github/copilot-instructions.md` is unavailable, tell the agent to use `requirement.md` and your selected stack explicitly.
 
 **Expected result**
 
@@ -212,7 +212,7 @@ TypeScript implementation files to create: `src/services/task.service.ts` · `sr
 ### Prompt
 
 ```
-Implement the four Task Management API endpoints from #file:doc/tsd.md when it is available, otherwise use the endpoint reference above and #file:requirement.md.
+Implement the four Task Management API endpoints from #readFile:doc/tsd.md when it is available, otherwise use the endpoint reference above and #readFile:requirement.md.
 Use src/repositories/task.repository.ts — the service layer calls the repository,
 never raw JSON directly.
 

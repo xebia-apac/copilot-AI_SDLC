@@ -72,7 +72,7 @@ If the current Chat UI provides a prompt-file creation command, use it with the 
 ```
 This prompt is specifically for the Intelligent Task Management System (ITMS) project.
 When invoked, it should:
-1. Read #file:doc/frd.md and #file:doc/tsd.md
+1. Read #readFile:doc/frd.md and #readFile:doc/tsd.md
 2. Generate a phased implementation plan with our specific tech stack: [YOUR STACK e.g. TypeScript/Express/PostgreSQL]
 3. Reference the correct folder structure: src/routes/, src/services/, src/repositories/, src/models/
 4. Include database migration tasks using our tooling convention

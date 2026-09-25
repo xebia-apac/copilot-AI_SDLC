@@ -181,6 +181,6 @@ This single addition significantly reduces hallucinations (Copilot inventing fil
 
 ---
 
-**Next optional**: [Exercise 20 — Database & SQL / PL/SQL](exercise-20-database-sql.md)
+**Next optional**: [Exercise 20 — Database & SQL / PL/pgSQL](exercise-20-database-sql.md)
 
 **Return to Mandatory Track →**: [Exercise 16 — Build & Debug with the Local Agent](exercise-16-build-debug.md)

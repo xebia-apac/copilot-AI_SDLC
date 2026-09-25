@@ -86,7 +86,7 @@ For each fix:
 2. Show the fixed code (after)
 3. Explain why the fix closes the vulnerability
 
-Don't apply MEDIUM or LOW findings yet — add a comment with // SECURITY-TODO: [finding summary] instead.
+Don't apply MEDIUM or LOW findings yet — add a language-appropriate comment containing `SECURITY-TODO: [finding summary]` instead.
 ```
 
 Watch Copilot work through the findings and edit only the actual affected API, UI, test, or configuration files identified in the review.

@@ -59,7 +59,7 @@ If Agent mode or the package manager is unavailable, ask Copilot to report the m
 Send this prompt:
 
 ```
-Read #file:doc/frd.md (focus on FR-IDs for task management) and the service files in `src/services/`.
+Read #readFile:doc/frd.md (focus on FR-IDs for task management) and the service files in `src/services/`.
 
 Generate unit tests in tests/unit/ for the Task Service:
 
@@ -99,7 +99,7 @@ If the service paths or FRD are unavailable, stop and report the upstream depend
 Send this prompt:
 
 ```
-Read #file:doc/frd.md (focus on the Gherkin acceptance criteria in user stories US-001 to US-006) and the actual API routes in `src/routes/`.
+Read #readFile:doc/frd.md (focus on the Gherkin acceptance criteria in user stories US-001 to US-006) and the actual API routes in `src/routes/`.
 
 Generate integration tests in tests/integration/ for the Task Management API:
 
@@ -185,7 +185,7 @@ If tests cannot run, preserve the exact command output and report whether the fa
 
 Send this prompt in Copilot Chat (Agent mode if available):
 ```
-Read #file:doc/frd.md and generate functional test cases for the ITMS application using Selenium WebDriver.
+Read #readFile:doc/frd.md and generate functional test cases for the ITMS application using Selenium WebDriver.
 
 Requirements:
 Use Page Object Model: create a TaskPage class in `tests/functional/pages/TaskPage` with the correct extension for the selected language

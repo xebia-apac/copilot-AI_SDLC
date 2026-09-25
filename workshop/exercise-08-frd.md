@@ -41,7 +41,7 @@ Refresh or reopen the workspace and confirm that `.github/agents/frd.agent.md` h
 Copy and paste this prompt into Chat:
 
 ```
-Read #file:doc/brd.md, #file:doc/tsd.md, and #file:requirement.md. Create a comprehensive Functional Requirements Document and save it as doc/frd.md.
+Read #readFile:doc/brd.md, #readFile:doc/tsd.md, and #readFile:requirement.md. Create a comprehensive Functional Requirements Document and save it as doc/frd.md.
 
 Include:
 - A User Roles & Permissions Matrix using relevant ITMS roles. If Developer, Team Lead, Project Manager, and QA Engineer are used, identify them as role assumptions because they are not defined in requirement.md
@@ -53,7 +53,7 @@ Include:
 - Error scenarios and user-facing error messages
 ```
 
-If any `#file` reference is not recognized, attach `doc/brd.md`, `doc/tsd.md`, and `requirement.md` using the current Chat context control and send the same request referring to the attached files.
+If any `#readFile` reference is not recognized, attach `doc/brd.md`, `doc/tsd.md`, and `requirement.md` using the current Chat context control and send the same request referring to the attached files.
 
 **Expected result**
 

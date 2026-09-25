@@ -41,7 +41,7 @@ Refresh or reopen the workspace and confirm that `.github/agents/tsd.agent.md` h
 Copy and paste this prompt into Chat:
 
 ```
-Read #file:doc/brd.md and #file:requirement.md, then create a complete Technical Specification Document saved as doc/tsd.md.
+Read #readFile:doc/brd.md and #readFile:requirement.md, then create a complete Technical Specification Document saved as doc/tsd.md.
 
 Requirements:
 - Include a Mermaid system architecture diagram showing all major components
@@ -53,7 +53,7 @@ Requirements:
 - Trace every technical decision back to a BRD requirement ID
 ```
 
-If either `#file` reference is not recognized, attach `doc/brd.md` and `requirement.md` using the current Chat context control and send the same request referring to the attached files.
+If either `#readFile` reference is not recognized, attach `doc/brd.md` and `requirement.md` using the current Chat context control and send the same request referring to the attached files.
 
 **Expected result**
 

@@ -29,7 +29,7 @@ Complete Exercises 05–12 as far as your environment requires and confirm that 
 In Copilot Chat, select the local/workspace Agent mode if available and send:
 
 ```
-Read #file:doc/frd.md (sections: User Roles & Permissions, UC-001 through UC-006)
+Read #readFile:doc/frd.md (sections: User Roles & Permissions, UC-001 through UC-006)
 and the actual API route files under src/routes/ to understand the available API endpoints.
 
 Scaffold a frontend project for the ITMS inside a new ui/ folder at the workspace root.
@@ -59,7 +59,7 @@ The workspace contains a `ui/` scaffold, API client, environment example, shared
 
 **If unavailable**
 
-If Agent mode or a `#file` reference is unavailable, attach the FRD and route files using the current Chat context control or provide the selected paths explicitly. Do not assume routes that are not present in the API source.
+If Agent mode or a `#readFile` reference is unavailable, attach the FRD and route files using the current Chat context control or provide the selected paths explicitly. Do not assume routes that are not present in the API source.
 
 ---
 
@@ -103,7 +103,7 @@ If the FRD or task route is unavailable, use `requirement.md` and the Exercise 1
 The Create Task form maps to **UC-001 (Task Creation)** and **UC-002 (Task Assignment)**.
 
 ```
-Read #file:doc/frd.md UC-001 and UC-002, the POST /api/v1/tasks request body schema, and `src/data/users.json` to understand the seeded user shape.
+Read #readFile:doc/frd.md UC-001 and UC-002, the POST /api/v1/tasks request body schema, and `src/data/users.json` to understand the seeded user shape.
 
 Generate ui/src/pages/CreateTaskPage.tsx with a controlled form that:
 - Copies or imports `src/data/users.json` into the UI application, for example as `ui/src/data/users.json`, and uses that bundled fixture for the Assigned To dropdown. Do not fetch users from an API: Exercise 12 does not define `GET /api/v1/users`.
