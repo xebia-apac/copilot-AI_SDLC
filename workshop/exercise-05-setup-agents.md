@@ -1,10 +1,14 @@
 # Exercise 05 — Setup & Create Custom Agents
 
-**Duration**: 5 minutes  
+**Duration**: Approximately 15 minutes in a preconfigured environment
 **Copilot Feature**: Custom Agents (`.agent.md`)  
 **Goal**: Understand what custom agents are and create the three SDLC analysis agents for this workshop.
 
 ---
+
+## Prerequisite
+
+Complete Exercises 01–04 and confirm that Copilot Chat and the custom-agent concepts are available in your VS Code environment. Open this repository as a VS Code workspace and ensure `requirement.md` is present.
 
 ## Background
 
@@ -21,26 +25,26 @@ You will create three agents:
 
 ## Step 1 — Review the Starting Requirement
 
+**Action**
+
 Open [`requirement.md`](../requirement.md) and read the project requirement. This is the **single source of truth** for everything you build in this workshop.
 
 > Take 1 minute to read it. Notice the stakeholders, task types, and technical constraints. These will all show up in the documents Copilot generates.
+
+**Expected result**
+
+You can identify the ITMS business objective, functional requirements, and non-functional requirements that the agents must use.
 
 ---
 
 ## Step 2 — Create the Agent Files Directory
 
-In VS Code, create the directory structure:
-Create agent using the configuration option
-- Open GitHub Copilot Chat in Visual Studio Code.
-- From the agents dropdown at the bottom of the chat view, click Configure Custom Agents..., then click  Create new custom agent.
-- Choose the location where the agent profile should be created:
-   - Workspace: Create the custom agent profile in the ```.github/agents``` folder of your workspace to only use it within that workspace.
-- Enter a file name for the custom agent. This is the default name that appears in the agents dropdown.
-- Configure the agent profile in the newly created .agent.md file, including the description, tools, and prompts. For more information create [Configure agent profile](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent/create-custom-agents#configuring-an-agent-profile)
+**Action**
 
-> **Tip**: You can also create the agent file manually in the `.github/agents/` directory and add the YAML frontmatter with the necessary configuration. However, using the `/create-agent` command in the chat ensures you have the correct structure and tools setup.
-
-or
+1. Open GitHub Copilot Chat in Visual Studio Code.
+2. Use the agent selector or agents menu, if available, and choose the option to configure or create a custom agent.
+3. Choose **Workspace** so the profile is created under `.github/agents/`.
+4. Create the directory if it does not exist, then create these three files:
 
 ```
 .github/
@@ -50,11 +54,19 @@ or
     └── frd.agent.md
 ```
 
-> **Tip**: Agent files stored in `.github/agents/` are automatically discovered by GitHub Copilot in VS Code.
+**Expected result**
+
+The workspace contains `.github/agents/` and is ready for the three agent profiles below.
+
+**If unavailable**
+
+Create the directory and files manually. Add the YAML frontmatter shown in each profile, then refresh or reopen the workspace so Copilot can discover them. Agent menu labels and creation commands vary by VS Code and Copilot version.
 
 ---
 
 ## Step 3 — Create the BRD Agent
+
+**Action**
 
 Create the file `.github/agents/brd.agent.md` and paste the content below:
 
@@ -62,7 +74,7 @@ Create the file `.github/agents/brd.agent.md` and paste the content below:
 ---
 name: BRD Author
 description: "Use when you need to create or update a Business Requirements Document (BRD). Triggered by: create BRD, generate business requirements document, write BRD, analyze requirements and create BRD."
-tools: [vscode, execute, read, agent, browser, edit, search, web, todo]
+tools: [execute, read, agent, edit, search, web, todo]
 ---
 
 You are a **Senior Business Analyst** with 15+ years of experience writing Business Requirements Documents for enterprise software projects. You follow industry-standard BA practices and produce clear, structured BRDs that both technical and non-technical stakeholders can use.
@@ -114,7 +126,12 @@ Produce the document with these sections **in order**:
 
 ---
 ```
+
+**Expected result:** `.github/agents/brd.agent.md` exists with valid frontmatter and the BRD Author profile instructions.
+
 ## Step 4 — Create the TSD Agent
+
+**Action**
 
 Create `.github/agents/tsd.agent.md` and paste:
 
@@ -122,7 +139,7 @@ Create `.github/agents/tsd.agent.md` and paste:
 ---
 name: TSD Author
 description: "Use when you need to create or update a Technical Specification Document (TSD). Triggered by: create TSD, generate technical specification, write technical design, create system architecture document."
-tools: [vscode, execute, read, agent, browser, edit, search, web, todo]
+tools: [execute, read, agent, edit, search, web, todo]
 ---
 
 You are a **Senior Software Architect** with deep expertise in enterprise system design, REST APIs, database architecture, and cloud-native patterns. You write Technical Specification Documents that give engineering teams everything they need to build without ambiguity.
@@ -190,7 +207,12 @@ Produce the document with these sections **in order**:
 
 ---
 ```
+
+**Expected result:** `.github/agents/tsd.agent.md` exists with valid frontmatter and the TSD Author profile instructions.
+
 ## Step 5 — Create the FRD Agent
+
+**Action**
 
 Create `.github/agents/frd.agent.md` and paste:
 
@@ -198,7 +220,7 @@ Create `.github/agents/frd.agent.md` and paste:
 ---
 name: FRD Author
 description: "Use when you need to create or update a Functional Requirements Document (FRD). Triggered by: create FRD, generate functional requirements, write use cases, create user stories, develop FRD from BRD."
-tools: [vscode, execute, read, agent, browser, edit, search, web, todo]
+tools: [execute, read, agent, edit, search, web, todo]
 ---
 
 You are a **Senior Functional Analyst** with expertise in use case modeling, user story writing, and Agile requirements engineering. You bridge the gap between business stakeholders and development teams by defining precisely what the system must do in functional, testable terms.
@@ -257,7 +279,11 @@ Produce the document with these sections **in order**:
 ---
 ```
 
+**Expected result:** `.github/agents/frd.agent.md` exists with valid frontmatter and the FRD Author profile instructions.
+
 ## Step 6 - DevOps Engineer Agent _(Optional)_
+
+**Action**
 
 Create `.github/agents/devops.agent.md` and paste:
 
@@ -265,7 +291,7 @@ Create `.github/agents/devops.agent.md` and paste:
 ---
 name: DevOps & IaC Agent
 description: "Use when you need to create Infrastructure as Code, CI/CD pipelines, Docker configurations, or deployment scripts. Triggered by: create IaC, generate Terraform, write CI/CD pipeline, create GitHub Actions workflow, create Dockerfile, deployment scripts."
-tools: [vscode, execute, read, agent, browser, edit, search, web, todo]
+tools: [execute, read, agent, edit, search, web, todo]
 ---
 
 You are a **Senior DevOps Engineer** and **Cloud Architect** specializing in Infrastructure as Code, CI/CD pipelines, and cloud-native deployments on Azure. You follow GitOps principles and infrastructure best practices.
@@ -276,9 +302,11 @@ Create production-ready IaC, Docker configurations, and CI/CD pipeline configura
 
 ## Context to Read First
 
-1. Read `doc/tsd.md` for the infrastructure and deployment architecture
-2. Read `req.md` for non-functional requirements (availability, scalability, security)
-3. Explore `src/` to understand the application structure and runtime
+The DevOps agent can be created in this exercise and used after the architecture and application artifacts exist.
+
+1. Read `doc/tsd.md` for the infrastructure and deployment architecture when it is available
+2. Read `requirement.md` for non-functional requirements (availability, scalability, security)
+3. Explore `src/` to understand the application structure and runtime when it is available
 
 ## What to Create
 
@@ -327,18 +355,26 @@ Create production-ready IaC, Docker configurations, and CI/CD pipeline configura
 - CI/CD pipelines must include test gates (build fails if tests fail)
 ```
 
+**Expected result:** If the optional profile is created, `.github/agents/devops.agent.md` exists with valid frontmatter and DevOps/IaC instructions.
+
 ## Verify
 
-In VS Code:
-1. Open Copilot Chat (`Ctrl+Alt+I`)
-2. Click the **agent selector** — you should see **BRD Author**, **TSD Author**, and **FRD Author** listed
-3. If they don't appear, check that the files are in `.github/agents/` and the YAML frontmatter is valid
+**Action**
+
+1. Open Copilot Chat using the Chat icon, the configured Chat shortcut, or the Command Palette.
+2. Open the agent selector or agents menu, if available.
+3. Check for **BRD Author**, **TSD Author**, and **FRD Author**.
+4. If they do not appear, check that the files are in `.github/agents/`, the YAML frontmatter is valid, and the workspace has been refreshed.
+
+**Expected result**
+
+The three required agents are discoverable in the current Copilot agent selector or workspace agent list.
+
+**If unavailable**
+
+Use the manual file checks above and consult the current VS Code/Copilot custom-agent documentation. Discovery and selector labels vary by version and account capability.
 
 ---
-
-## Key Takeaway
-
-> Custom agents let you preload domain expertise, tool restrictions, and output format into Copilot. Instead of repeating "you are a business analyst, output to this file, follow this structure" — you save it once as an agent and reuse it across projects.
 
 ---
 

@@ -1,7 +1,7 @@
 # E2E SDLC with GitHub Copilot — Workshop
 
 > **Audience**: Developers, Tech Leads, Architects  
-> **Total Duration**: ~55 min mandatory + ~30 min optional (see two-track map below)  
+> **Workshop format**: A guided instructor/demo path can cover the complete Copilot SDLC flow in the planned session. The full hands-on path covers Exercises 01–16 and should be completed at the participant's own pace.
 > **Pre-requisites**: VS Code with GitHub Copilot Chat extension, Node/Python/Java runtime, Git CLI, GitHub Copilot access, GitHub MCP, Mermaid extension for VS code.
 
 ---
@@ -35,17 +35,17 @@ Participants should have the following set up before starting the workshop:
 - Node/Python/Java runtime/.net SDK (depending on your language choice)
 - GitHub Copilot access
 - [Git CLI](https://git-scm.com/install/)
-- [GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli/install-copilot-cli)
+- [GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli/install-copilot-cli) (optional; only needed for terminal-based workflows where explicitly mentioned)
 - [GitHub MCP](https://github.com/mcp/github/github-mcp-server)
 - [Mermaid extension](https://marketplace.visualstudio.com/items?itemName=MermaidChart.vscode-mermaid-chart) for VS code
 
 ## Workshop Map
 
-> **Two-Track Design**: Complete the **Mandatory Track** first (~50 min) — it covers every SDLC phase end-to-end with no gaps. Then pick any **Optional** exercises based on time and interest. Optional exercises are self-contained; no mandatory exercise depends on them.
+> **Two-Track Design**: Complete the **Mandatory Track** first — it covers every SDLC phase end-to-end with no gaps. Then pick any **Optional** exercises based on time and interest. Optional exercises are self-contained; no mandatory exercise depends on them.
 
 ---
 
-### 🔵 Mandatory Track (~55 minutes)
+### 🔵 Mandatory Track — Exercises 01–16
 
 These exercises form the core SDLC journey. Each builds directly on the previous one and introduces a distinct GitHub Copilot feature.
 
@@ -68,11 +68,11 @@ These exercises form the core SDLC journey. Each builds directly on the previous
 | 15 | [Security Review](workshop/exercise-15-security.md) | Security Prompt File | 4 min |
 | 16 | [Build & Debug](workshop/exercise-16-build-debug.md) | Local Agent + Terminal | 5 min |
 
-> **Why these 12?** They cover every key Copilot feature — Custom Agents → Prompt Files → Plan Mode → Local Agent → Testing → Security → UI Scaffolding — mirroring a real end-to-end SDLC from requirements to a running, full-stack application.
+> These mandatory exercises form the core SDLC journey: setup, Chat, prompting, Copilot artifacts, requirements, planning, implementation, UI, testing, security, and build/debug.
 
 ---
 
-### 🟡 Optional Track (~30 minutes — pick any, in any order)
+### 🟡 Optional Track — Exercises 17–21
 
 These exercises are self-contained. No mandatory exercise depends on them. Complete them if time allows, or revisit them after the workshop.
 
@@ -81,11 +81,11 @@ These exercises are self-contained. No mandatory exercise depends on them. Compl
 | 17 | [Create GitHub Issues via MCP](workshop/exercise-17-github-issues.md) | GitHub MCP + Prompt File | 5 min | Ex 11 |
 | 18 | [Background Agent Task](workshop/exercise-18-background-agent.md) | Background Agent | 3 min | Ex 12 |
 | 19 | [Context Map Skill](workshop/exercise-19-context-map.md) | Skills (`SKILL.md`) | 4 min | Ex 12 |
-| 20 | [Database & SQL / PL/SQL](workshop/exercise-20-database-sql.md) | Local Agent + Instructions | 5 min | Ex 19 |
+| 20 | [Database & SQL / PL/pgSQL](workshop/exercise-20-database-sql.md) | Local Agent + Instructions | 5 min | Ex 19 |
 | 21 | [IaC & CI/CD](workshop/exercise-21-iac-cicd.md) | Custom Agent + Prompt File | 5 min | Ex 16 |
 
 > **Note on Ex 17**: Requires a GitHub repository and a Personal Access Token with `repo` and `issues` scopes. Skip if GitHub MCP is not pre-configured in your environment.
-> **Note on Ex 20**: References the context map from Ex 19. If you skip Ex 19, remove the `#context-map.md` reference from the prompts before sending.
+> **Note on Ex 20**: References the context map from Ex 19. If you skip Ex 19, remove the `#readFile:.github/skills/context-map/context-map.md` reference from the prompts before sending.
 
 ---
 > The workshop has been tested with the following AI models on GitHub Copilot: `Claude Sonnet 4.6`,`GPT-5.3-codex`. Results may vary with different models. If you encounter issues, try switching to one of these models in your Copilot settings.
@@ -96,7 +96,7 @@ These exercises are self-contained. No mandatory exercise depends on them. Compl
 
 ```
 SDLC2/
-├── req.md                          ← Starting requirement (provided)
+├── requirement.md                  ← Starting requirement (provided)
 ├── doc/
 │   ├── brd.md                      ← Generated in Exercise 06
 │   ├── tsd.md                      ← Generated in Exercise 07
@@ -109,10 +109,11 @@ SDLC2/
 │   │   ├── frd.agent.md            ← Created in Exercise 05
 │   │   └── devops.agent.md         ← Created in Exercise 21
 │   └── prompts/
-    ├── implementation-plan.prompt.md  ← Created in Exercise 11
-        ├── github-issues.prompt.md        ← Created in Exercise 17
-        └── security-review.prompt.md      ← Created in Exercise 15
-├── .github/skills/context-map/     ← Created in Exercise 19
+│       ├── implementation-plan.prompt.md  ← Pre-provided starter prompt; used in Exercise 11
+│       ├── github-issues.prompt.md        ← Pre-provided starter prompt; used in Exercise 17
+│       └── security-review.prompt.md      ← Pre-provided starter prompt; used in Exercise 15
+├── .github/skills/
+│   └── context-map/                ← Created in Exercise 19
 ├── src/                            ← API code created in Exercise 12+
 ├── ui/                             ← Frontend scaffolded in Exercise 13
 ├── tests/                          ← Tests created in Exercise 14
@@ -149,18 +150,5 @@ SDLC2/
 ---
 
 ---
-
-## Further Learning — Try next
-
-Explore these exercises to go deeper on the Copilot features:
-
-- [Integrate MCP with Copilot](https://github.com/skills/integrate-mcp-with-copilot) — Connect Model Context Protocol servers to extend Copilot with external tools and data sources
-- [Create Applications with the Copilot CLI](https://github.com/skills/create-applications-with-the-copilot-cli) — Use GitHub Copilot CLI to scaffold and build applications from the terminal
-- [Scale Institutional Knowledge using Copilot Spaces](https://github.com/skills/scale-institutional-knowledge-using-copilot-spaces) — Organise team knowledge and context into Copilot Spaces for consistent, organisation-wide AI assistance
-- [Idea to App with Copilot Spark](https://github.com/skills/idea-to-app-with-spark) — Go from a natural language idea to a deployed application using Copilot Spark
-- [Expand Your Team with the Copilot Coding Agent](https://github.com/skills/expand-your-team-with-copilot) — Delegate tasks to the Copilot coding agent and collaborate with it like a team member
-
----
-
 
 > **Instructor Note**: Each exercise has a `> Instructor Guide` section visible only in the markdown source. Exercises are designed so attendees never need to copy code — they copy **prompts** and let Copilot generate the output.

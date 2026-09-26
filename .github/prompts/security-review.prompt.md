@@ -9,7 +9,7 @@ Perform a comprehensive security review of the codebase, identifying vulnerabili
 
 ## Scope
 
-Scan all source files in `src/` and configuration files in the workspace root and `infra/`.
+Scan all relevant workspace files, including API source in `src/`, UI source in `ui/`, tests in `tests/`, configuration files in the workspace root, and infrastructure in `infra/` when present.
 
 ## Review Checklist
 
